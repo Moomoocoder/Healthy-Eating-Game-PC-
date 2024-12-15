@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Pac-Man</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.9.0/nipplejs.min.js"></script>
+</head>
+<body>
+    <div class="popup" id="popup-1">
+        <div class="overlay" onclick="togglePopup()"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">×</div>
+            <h1>Why are some unhealthy and healthy?</h1>
+            <h2>Unhealthy:</h2>
+            <h3>Fries: A lot of fats and no vegetables (Read the book for more info about fats!).</h3>
+            <h3>Burger: It has a lot of chemicals and salt, which is not good! (Read more about salt in the book!)</h3>
+            <h3>Chocolate Bar: Some have too much sugar, which can give you a tummy-ache! (Read more about carbohydrates (sugar) in the book!)</h3>
+            <h2>Healthy:</h2>
+            <h3>Apple: Very high in vitamins!</h3>
+            <h3>Banana: High in minerals (potassium) so you grow strong</h3>
+            <h3>Carrot: Helps you see better!</h3>
+        </div>
+    </div>
+    <button onclick="togglePopup()">!!Click for Info!!</button>
+
+    <div id="game-container">
+        <div class="pacman" id="pacman" style="left: 0; top: 0;"></div>
+        <!-- Add healthy food items -->
+        <img src="images/apple.png" class="food" style="left: 100px; top: 100px;">
+        <img src="images/banana.png" class="food" style="left: 400px; top: 300px;">
+        <img src="images/carrot.png" class="food" style="left: 200px; top: 500px;">
+        <img src="images/strawberry.png" class="food" style="left: 600px; top: 150px;">
+        <!-- Add unhealthy food items -->
+        <img src="images/frenchfries.png" class="unhealthy-food" style="left: 300px; top: 100px;">
+        <img src="images/chocolatebar.png" class="unhealthy-food" style="left: 500px; top: 400px;">
+        <img src="images/Borgir.png" class="unhealthy-food" style="left: 700px; top: 200px;">
+        
+        <div id="scoreboard">Score: 0</div>
+        <div id="lives-container"></div>
+    </div>
+
+    <!-- Joystick -->
+    <div id="joystick-container">
+        <div id="joystick"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
